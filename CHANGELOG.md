@@ -24,7 +24,7 @@ y este proyecto adhiere a [SemVer](https://semver.org/spec/v2.0.0.html).
 ### Cambiado
 - Refactorizaciones estructurales y optimizaciones de rendimiento aplicadas a lo largo del sprint actual.
 
-## [0.1.0] - 2026-04-26
+## [0.1.0] - 2026-04-19
 
 ### Añadido
 - Estructura inicial del proyecto Estante.
