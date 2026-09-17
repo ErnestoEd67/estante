@@ -6,7 +6,7 @@
 | Versión | 1.0 |
 | Motor de Base de Datos | MySQL |
 | Tecnología | Java + JavaFX |
-| Fecha | Mayo 2026 |
+| Última actualización | 2026-06-13 |
 
 ---
 
