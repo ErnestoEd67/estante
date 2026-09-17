@@ -69,7 +69,7 @@ public class ConexionDAOMySQL implements IConexionDAO {
         String url = construirUrl(conexion);
         return DriverManager.getConnection(url,
                 conexion.getUsuario(),
-                conexion.getContrasena());
+                conexion.getPassword());
     }
 
     @Override
