@@ -26,7 +26,7 @@ import java.util.regex.Pattern;
  */
 public class ImportadorCSV {
 
-    private static final Pattern IDENTIFICADOR_SEGURO = Pattern.compile("[A-Za-z0-9_]+");
+    private static final Pattern IDENTIFICADOR_SEGURO = Pattern.compile("[A-Za-z_][A-Za-z0-9_]*");
 
     /**
      * Importa los datos del CSV a la tabla indicada.
