@@ -158,19 +158,23 @@ public class GeneradorCreateTable {
                 || upperType.contains("CHARACTER VARYING")) {
             return columnSize > 0 ? "VARCHAR(" + columnSize + ")" : "VARCHAR";
         }
-        if (upperType.contains("CHAR")) {
+        if (upperType.contains("CHAR") || upperType.contains("BPCHAR")) {
             return columnSize > 0 ? "CHAR(" + columnSize + ")" : "CHAR";
         }
-        if (upperType.contains("BIGINT")) return "BIGINT";
-        if (upperType.contains("SMALLINT") || upperType.contains("TINYINT")) {
-            return "SMALLINT";
-        }
-        if (upperType.contains("INT")) return "INTEGER";
+        if (upperType.contains("BIGINT") || upperType.equals("INT8")) return "BIGINT";
+        if (upperType.contains("SMALLINT")
+                || upperType.contains("TINYINT")
+                || upperType.equals("INT2")) return "SMALLINT";
+        if (upperType.contains("INT") || upperType.equals("INT4")) return "INTEGER";
         if (upperType.contains("BLOB")
                 || upperType.contains("BINARY")
                 || upperType.contains("VARBINARY")) return "BYTEA";
-        if (upperType.contains("DOUBLE")) return "DOUBLE PRECISION";
-        if (upperType.contains("FLOAT") || upperType.contains("REAL")) return "REAL";
+        if (upperType.contains("DOUBLE") || upperType.equals("FLOAT8")) {
+            return "DOUBLE PRECISION";
+        }
+        if (upperType.contains("FLOAT")
+                || upperType.contains("REAL")
+                || upperType.equals("FLOAT4")) return "REAL";
         if (upperType.contains("DATETIME")) return "TIMESTAMP";
         return upperType;
     }
